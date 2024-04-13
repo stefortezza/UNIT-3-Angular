@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="text-center">
+      <img
+        src="assets/img/Ford.png"
+        style="width: 15%"
+      />
+      <h3 class="display-4 fw-semibold m-0">Le nostre auto Ford</h3>
+    </div>
+    <div class="row my-4">
+      <div
+        class="col-4 d-flex justify-content-center my-2"
+        *ngFor="let car of Ford"
+      >
+        <span *ngIf="car.available">
+          <div class="card bg-success-subtle border-1 border-success w-100">
+            <img
+              src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+              class="card-img-top"
+            />
+            <div class="card-body justify-content-center">
+              <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+              <div>
+                <p class="card-text badge bg-success text-white me-1">
+                    Anno: {{ car.year }}
+                </p>
+                <p class="card-text badge bg-success text-white me-1">
+                    Prezzo: € {{ car.price }}
+                </p>
+                <p class="card-text badge bg-success text-white">Disponibile</p>
+              </div>
+            </div>
+          </div>
+        </span>
+        <span *ngIf="!car.available">
+          <div class="card bg-danger-subtle border border-danger">
+            <img
+              src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+              class="card-img-top"
+            />
+            <div class="card-body justify-content-center">
+              <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+              <div>
+                <p class="card-text badge bg-danger text-black me-1">
+                    Anno: {{ car.year }}
+                </p>
+                <p class="card-text badge bg-danger text-black me-1">
+                    Prezzo: € {{ car.price }}
+                </p>
+                <p class="card-text badge bg-danger text-black">
+                  Non disponibile
+                </p>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>

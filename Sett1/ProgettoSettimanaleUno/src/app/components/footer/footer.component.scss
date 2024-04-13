@@ -1,0 +1,74 @@
+#footer {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 80px;
+}
+
+#custom-margin {
+  margin-right: 30px;
+}
+
+#image img {
+  height: 120px;
+}
+#lorem {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#flip {
+  font-size: 1.5rem;
+  height: 50px;
+  width: 300px;
+  margin-left: 70px;
+  margin-bottom: 30px;
+  color: #fff;
+  border: 6px solid #ff530d;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#flip span:before {
+  display: block;
+  position: absolute;
+  border-radius: 40px;
+  background: #ff530d;
+}
+#flip:focus {
+  outline: none;
+}
+#flip:hover {
+  color: #2b3a42;
+}
+
+#flip:hover span:before {
+  opacity: 1;
+  transform: translate(0) rotate(0deg) scale(1.4);
+}
+
+#panel {
+  display: none;
+  background: #2b3a42;
+  width: 80%;
+  margin: 0 auto; 
+}
+
+#panel p {
+  color: #efefef;
+  font-size: 1.5rem; 
+  margin-bottom: 20px; 
+}
+
+.con-form {
+  width: 100%;
+  text-align: center; 
+}
+
+.con-form input,
+.con-form textarea {
+  width: 100%; 
+  margin-bottom: 10px;
+}

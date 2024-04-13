@@ -1,0 +1,116 @@
+<footer class="footer bg-black text-white">
+  <div class="container-fluid">
+    <div class="row pt-3">
+      <div class="col-md-4 text-center">
+        <a
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+          id="image"
+        >
+          <img
+            src="../../../assets/img/logo2.jpg"
+            alt="Logo"
+            class="logo mb-0 mt-2"
+          />
+        </a>
+        <p class="mb-0">Il tuo autosalone di fiducia</p>
+        <p class="mb-0">Via Tal dei Taili, 25</p>
+        <p class="mb-0">00100 Torino</p>
+        <p class="mb-0">
+          <img
+            src="https://img.icons8.com/ios/50/000000/phone.png"
+            class="bg-white mx-1"
+            alt="Icona telefono"
+            width="20px"
+            height="20px"
+            style="vertical-align: middle"
+          />
+          <span style="vertical-align: middle"> 3381010101</span>
+        </p>
+        <p class="mb-0">
+          <img
+            src="https://img.icons8.com/ios/50/000000/new-post.png"
+            class="bg-white p-1 mx-2"
+            alt="Icona email"
+            width="20px"
+            height="20px"
+            style="vertical-align: middle"
+          />
+          <span style="vertical-align: middle">info@autorent.com</span>
+        </p>
+        <br />
+      </div>
+
+      <div class="col-md-4" id="footer">
+        <a
+          class="nav-link active text-white ms-3 d-inline-block"
+          routerLink=""
+          routerLinkActive="router-link-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          id="custom-margin"
+          >Home</a
+        >
+        <span> | </span>
+        <a
+          class="nav-link text-white ms-3 d-inline-block"
+          routerLink="/fiat"
+          routerLinkActive="router-link-active"
+          id="custom-margin"
+          >Fiat</a
+        >
+        <span> | </span>
+        <a
+          class="nav-link text-white ms-3 d-inline-block"
+          routerLink="/ford"
+          routerLinkActive="router-link-active"
+          id="custom-margin"
+          >Ford</a
+        >
+        <span> | </span>
+        <a
+          class="nav-link text-white ms-3 d-inline-block"
+          routerLink="/audi"
+          routerLinkActive="router-link-active"
+          id="custom-margin"
+          >Audi</a
+        >
+      </div>
+      <div class="row col-md-4" id="lorem">
+        <div id="flip" class="f-btn" (click)="togglePanel()">
+          <span>Contattaci </span>
+        </div>
+        <br />
+        <div id="panel">
+          <div class="con-form">
+            <form id="form" method="post" name="form">
+              <input
+                name="client"
+                placeholder="Il tuo nome"
+                type="text"
+                value=""
+                required
+                pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+"
+                title="firstname lastname"
+              />
+
+              <input
+                name="email"
+                placeholder="La tua E-mail"
+                type="email"
+                value=""
+                required
+              />
+              <textarea
+                name="comment"
+                placeholder="Messaggio ... "
+                id="comment"
+                required
+              ></textarea>
+              <input class="o-btn" type="Submit" value="Invia" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

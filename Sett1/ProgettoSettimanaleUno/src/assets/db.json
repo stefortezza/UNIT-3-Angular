@@ -1,0 +1,129 @@
+[
+    {
+      "brand": "Fiat",
+      "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+      "model": "500L",
+      "modelImage": "06/aut-51-iz0284-01p.jpg",
+      "year": 2015,
+      "price": 7500,
+      "available": false
+    },
+    {
+      "brand": "Fiat",
+      "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+      "model": "500 Abarth",
+      "modelImage": "06/aut-51-iz0271-01p.jpg",
+      "year": 2010,
+      "price": 3500,
+      "available": true
+    },
+    {
+      "brand": "Ford",
+      "brandLogo": "2016/03/Ford-Logo-600x338.png",
+      "model": "Taurus",
+      "modelImage": "01/aut-15-iz0614-01p.jpg",
+      "year": 2009,
+      "price": 5200,
+      "available": false
+    },
+    {
+      "brand": "Ford",
+      "brandLogo": "2016/03/Ford-Logo-600x338.png",
+      "model": "Focus",
+      "modelImage": "06/aut-50-iz1081-01p.jpg",
+      "year": 2014,
+      "price": 9700,
+      "available": true
+    },
+    {
+      "brand": "Audi",
+      "brandLogo": "2015/10/Audi-Logo-600x338.png",
+      "model": "A3",
+      "modelImage": "05/aut-46-iz0055-01p.jpg",
+      "year": 2012,
+      "price": 4300,
+      "available": true
+    },
+    {
+      "brand": "Audi",
+      "brandLogo": "2015/10/Audi-Logo-600x338.png",
+      "model": "Q7",
+      "modelImage": "06/aut-51-iz0124-01p.jpg",
+      "year": 2020,
+      "price": 41700,
+      "available": false
+    },
+    {
+      "brand": "Fiat",
+      "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+      "model": "Supersonic Coupe",
+      "modelImage": "02/aut-21-rk0506-19p.jpg",
+      "year": 1953,
+      "price": 61700,
+      "available": true
+    },
+    {
+      "brand": "Fiat",
+      "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+      "model": "Vignale 8V Coupe Red",
+      "modelImage": "02/aut-21-rk0160-08p.jpg",
+      "year": 1954,
+      "price": 67700,
+      "available": false
+    },
+    {
+      "brand": "Ford",
+      "brandLogo": "2016/03/Ford-Logo-600x338.png",
+      "model": "Mustang Convertible Blue ",
+      "modelImage": "07/mst-01-rk1734-01p.jpg",
+      "year": 1973,
+      "price": 57650,
+      "available": true
+    },
+    {
+      "brand": "Ford",
+      "brandLogo": "2016/03/Ford-Logo-600x338.png",
+      "model": "Bronco Blue ",
+      "modelImage": "07/aut-15-rk1379-01p.jpg",
+      "year": 1969,
+      "price": 8650,
+      "available": false
+    },
+    {
+      "brand": "Ford",
+      "brandLogo": "2016/03/Ford-Logo-600x338.png",
+      "model": "GT500 Heritage Blue",
+      "modelImage": "07/mst-04-rk0058-01p.jpg",
+      "year": 2022,
+      "price": 68850,
+      "available": true
+    },
+    {
+      "brand": "Audi",
+      "brandLogo": "2015/10/Audi-Logo-600x338.png",
+      "model": "R8",
+      "modelImage": "06/aut-54-rk0014-01p.jpg",
+      "year": 2018,
+      "price": 54300,
+      "available": true
+    },
+    {
+      "brand": "Audi",
+      "brandLogo": "2015/10/Audi-Logo-600x338.png",
+      "model": "Grandsphere Concept Grey",
+      "modelImage": "07/aut-09-rk1427-01p.jpg",
+      "year": 2022,
+      "price": 74500,
+      "available": true
+    },
+    {
+      "brand": "Audi",
+      "brandLogo": "2015/10/Audi-Logo-600x338.png",
+      "model": "PB 18 E-Tron Electric",
+      "modelImage": "01/aut-09-rk1410-01p.jpg",
+      "year": 2020,
+      "price": 74500,
+      "available": false
+    }
+  ]
+  

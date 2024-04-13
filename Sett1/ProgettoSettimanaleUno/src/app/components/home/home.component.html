@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-8">
+    <!-- <div class="p-4 mb-4 bg-body-secondary rounded-3">
+      <div class="container-fluid">
+        <div class="img-fluid text-center">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">
+            <img src="assets/img/logo2.jpg" width="300px"
+          /></a>
+        </div>
+        <h1 class="text-center mt-2">Il tuo salone di fiducia</h1>
+      </div>
+    </div> -->
+    <section class="text-center mt-5">
+      <h3>I nostri marchi</h3>
+      <div class="row">
+        <div class="col-4">
+          <a [routerLink]="['/fiat']" routerLinkActive="router-link-active"><img src="assets/img/Fiat.png" class="img-fluid" /></a> 
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/ford']" routerLinkActive="router-link-active"> <img src="assets/img/Ford.png" class="img-fluid" /></a>
+        </div>
+        <div class="col-4">
+          <a [routerLink]="['/audi']" routerLinkActive="router-link-active"><img src="assets/img/Audi.png" class="img-fluid" /> </a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="d-flex justify-content-around">
+        <div class="col-12">
+          <h3 class="text-center">Auto in evidenzia</h3>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-6 text-center" *ngFor="let car of selectedCars">
+          <div
+            class="card mb-5"
+            style="width: 25rem"
+            [ngClass]="{
+              'bg-success': car.available,
+              'bg-danger': !car.available
+            }"
+          >
+            <img
+              src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+              class="card-img-top"
+            />
+            <div class="card-body" id="card">
+              <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+              <span class="badge bg-primary me-1 text-uppercase"
+                >Anno: {{ car.year }}</span
+              >
+              <span class="badge bg-primary me-1 text-uppercase"
+                >Prezzo: € {{ car.price }}</span
+              >
+              <span class="badge bg-primary me-1 text-uppercase">{{
+                car.available ? "Pronta Consegna: SI" : "Pronta Consegna: NO"
+              }}</span>
+              <br /><br />
+              <a
+                [routerLink]="['/', car.brand.toLowerCase()]"
+                routerLinkActive="router-link-active"
+                class="btn btn-primary"
+                >Tutte le nostre {{ car.brand }}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+  </div>
+</div>
