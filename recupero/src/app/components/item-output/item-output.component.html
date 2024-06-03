@@ -1,0 +1,7 @@
+<div class="container mt-5">
+    <label for="input">Aggiungi un elemento</label>
+    <input type="text" id="input" name="input" #newItem />
+    <button type="button" (click)="addNewItem(newItem.value)">
+        Aggiungi
+    </button>
+</div>

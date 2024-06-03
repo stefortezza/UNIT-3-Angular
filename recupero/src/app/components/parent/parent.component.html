@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h2>Il mio componente child mi dice che oggi ho da fare:</h2>
+    <hr />
+    <h3>Elementi di lista inviati al component child</h3>
+    <div>
+        <ul>
+            <li *ngFor="let value of values">
+                <app-child [task]="value"></app-child>
+            </li>
+        </ul>
+    </div>
+</div>

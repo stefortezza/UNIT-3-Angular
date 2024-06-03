@@ -1,0 +1,226 @@
+<div class="container text-center">
+    <h1>Registrati</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="signupForm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Nome</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-control"
+                                formControlName="name"
+                            />
+                            <p
+                                *ngIf="
+                                    getFormC('name')?.invalid &&
+                                    getFormC('name')?.touched
+                                "
+                            >
+                                <strong class="text-danger"
+                                    >Campo obbligatorio</strong
+                                >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="surname" class="form-label"
+                                >Cognome</label
+                            >
+                            <input
+                                type="text"
+                                id="surname"
+                                name="surname"
+                                class="form-control"
+                                formControlName="surname"
+                            />
+                            <p
+                                *ngIf="
+                                    getFormC('surname')?.invalid &&
+                                    getFormC('surname')?.touched
+                                "
+                            >
+                                <strong class="text-danger"
+                                    >Campo obbligatorio</strong
+                                >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="username" class="form-label"
+                                >Username</label
+                            >
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="form-control"
+                                formControlName="username"
+                            />
+                            <p
+                                *ngIf="
+                                    getFormC('username')?.invalid &&
+                                    getFormC('username')?.touched
+                                "
+                            >
+                                <strong class="text-danger"
+                                    >Campo obbligatorio</strong
+                                >
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="password" class="form-label"
+                                >Password</label
+                            >
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                formControlName="password"
+                            />
+                            <p
+                                *ngIf="
+                                    getFormC('password')?.invalid &&
+                                    getFormC('password')?.touched
+                                "
+                            >
+                                <ng-container
+                                    *ngIf="getErrorsC('password', 'required')"
+                                >
+                                    <strong class="text-danger"
+                                        >Campo obbligatorio</strong
+                                    >
+                                </ng-container>
+                                <ng-container
+                                    *ngIf="
+                                        getErrorsC(
+                                            'password',
+                                            'invalidPassword'
+                                        )
+                                    "
+                                >
+                                    <strong class="text-danger"
+                                        >Almeno 8 caratteri, una maiuscola, una
+                                        minuscola, un numero e un carattere
+                                        speciale</strong
+                                    >
+                                </ng-container>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="passwordConf" class="form-label"
+                                >Conferma password</label
+                            >
+                            <input
+                                type="password"
+                                id="passwordConf"
+                                name="passwordConf"
+                                class="form-control"
+                                formControlName="passwordConf"
+                            />
+                            <p
+                                *ngIf="
+                                    getFormC('passwordConf')?.invalid &&
+                                    getFormC('passwordConf')?.touched
+                                "
+                            >
+                                <ng-container
+                                    *ngIf="
+                                        getErrorsC('passwordConf', 'required')
+                                    "
+                                >
+                                    <strong class="text-danger"
+                                        >Campo obbligatorio</strong
+                                    >
+                                </ng-container>
+                                <ng-container
+                                    *ngIf="
+                                        getErrorsC(
+                                            'passwordConf',
+                                            'passwordUnmatch'
+                                        )
+                                    "
+                                >
+                                    <strong class="text-danger"
+                                        >Le password non coincidono</strong
+                                    >
+                                </ng-container>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gender" class="form-label"
+                                >Genere</label
+                            >
+                            <select
+                                class="form-select"
+                                id="gender"
+                                name="gender"
+                                formControlName="gender"
+                            >
+                                <option value=""></option>
+                                <option
+                                    *ngFor="
+                                        let gender of genders;
+                                        let i = index
+                                    "
+                                    value="{{ gender }}"
+                                >
+                                    {{ gender }}
+                                </option>
+                            </select>
+                            <p
+                                *ngIf="
+                                    getFormC('gender')?.invalid &&
+                                    getFormC('gender')?.touched
+                                "
+                            >
+                                <strong class="text-danger"
+                                    >Selezionare un valore</strong
+                                >
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <label for="profileImage" class="form-label"
+                                >Immagine del profilo</label
+                            >
+                            <input
+                                type="url"
+                                id="profileImage"
+                                name="profileImage"
+                                class="form-control"
+                                formControlName="profileImage"
+                            />
+                        </div>
+                        <div class="col-12">
+                            <label for="bio" class="form-label"
+                                >Note biografiche</label
+                            >
+                            <textarea
+                                id="bio"
+                                name="bio"
+                                class="form-control"
+                                formControlName="bio"
+                                rows="4"
+                                cols="80"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="container text-center">
+                        <button
+                            type="submit"
+                            class="btn btn-primary mt-3"
+                            (click)="onSubmit()"
+                            [disabled]="signupForm.invalid"
+                        >
+                            Registrati
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
